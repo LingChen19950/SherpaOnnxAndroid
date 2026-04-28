@@ -19,11 +19,20 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+
+        // 只保留需要的 CPU 架构(推荐只保留 arm64-v8a),apk大小从150MB下降到48MB
+        ndk {
+            abiFilters += listOf("arm64-v8a")
+        }
     }
 
     buildTypes {
+        debug {
+            isMinifyEnabled = false // Debug 不启用压缩,方便调试
+        }
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true // 启用代码压缩和混淆,移除未使用的代码
+            isShrinkResources = true // 移除未使用的资源
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -40,6 +49,9 @@ android {
 }
 
 dependencies {
+    // 单独引用 sherpa-onnx AAR 文件
+    implementation(files("libs/sherpa-onnx-1.12.39.aar"))
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
@@ -59,4 +71,9 @@ dependencies {
     androidTestImplementation(libs.androidx.compose.ui.test.junit4)
     debugImplementation(libs.androidx.compose.ui.tooling)
     debugImplementation(libs.androidx.compose.ui.test.manifest)
+
+    // Jetpack Navigation
+    implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
+    implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+
 }

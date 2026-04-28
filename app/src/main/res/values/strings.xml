@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">SherpaOnnxAndroid</string>
+    <string name="real_asr">实时语音识别</string>
+    <string name="real_asr_tip">离线、实时、流式转文字</string>
+    <string name="tts">语音合成</string>
+    <string name="model_management">模型管理</string>
+    <string name="sherpa_onnx">Sherpa ONNX</string>
+    <string name="tts_tip">文字转语音</string>
+    <string name="model_tip">管理模型文件</string>
 </resources>

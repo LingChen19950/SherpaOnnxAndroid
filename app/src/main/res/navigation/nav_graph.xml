@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+    navigation: 导航图根标签
+    作用: 定义整个 App 的页面导航结构
+
+    属性说明:
+    - id: 导航图的唯一标识
+    - startDestination: 指定 App 启动时显示的第一个页面
+-->
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/main_fragment">
+
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.lc.sherpa.ui.MainFragment"
+        android:label="语音工具箱"
+        tools:layout="@layout/fragment_main">
+
+        <action
+            android:id="@+id/action_to_asr"
+            app:destination="@id/asr_fragment" />
+
+        <action
+            android:id="@+id/action_to_tts"
+            app:destination="@id/tts_fragment" />
+
+        <action
+            android:id="@+id/action_to_model"
+            app:destination="@id/model_fragment" />
+
+    </fragment>
+
+    <!-- 实时语音识别 -->
+    <fragment
+        android:id="@+id/asr_fragment"
+        android:name="com.lc.sherpa.ui.ASRFragment"
+        android:label="实时语音识别"
+        tools:layout="@layout/fragment_asr" />
+
+    <!-- 语音合成 -->
+    <fragment
+        android:id="@+id/tts_fragment"
+        android:name="com.lc.sherpa.ui.TTSFragment"
+        android:label="语音合成"
+        tools:layout="@layout/fragment_tts" />
+
+    <!-- 模型管理 -->
+    <fragment
+        android:id="@+id/model_fragment"
+        android:name="com.lc.sherpa.ui.ModelFragment"
+        android:label="模型管理"
+        tools:layout="@layout/fragment_model" />
+
+</navigation>

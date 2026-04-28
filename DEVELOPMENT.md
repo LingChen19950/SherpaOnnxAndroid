@@ -26,7 +26,6 @@ Sherpa Voice Toolbox 是一款完全离线的 Android 端语音工具箱，基�
 - Gradle 9.3.1
 - Android SDK (Compile)API 36 (Android 16)
 - Android SDK (minSdk)API 24 (Android 7.0)
-- NDK 25.2.9519653
 - 运行设备 真机 处理器 骁龙8至尊版
 
 ---
@@ -54,6 +53,7 @@ Android Studio Hedgehog 及以上自带 JDK 17，无需手动安装。
 - 预编译 AAR 存放位置：
 - app/libs/sherpa-onnx.aar
 - 升级引擎只需替换该 AAR 并同步 Gradle。
+- 只保留 arm64-v8a,apk大小从150MB下降到48MB
 
 ---
 🐛 6. 调试与日志
@@ -82,7 +82,7 @@ adb shell am force-stop com.sherpa.voice.toolbox
 SherpaVoiceToolbox/
 ├─ app/
 │  ├─ src/main/java/com/lc/sherpa/
-│  │  ├─ ui/                  # Fragment + ViewModel
+│  │  ├─ ui/                   # 界面层 Fragment + ViewModel
 │  │  └─ utils/                # 工具类
 │  ├─ src/main/res/            # 布局、图标、字符串
 │  └─ libs/                    # 本地 AAR（sherpa-onnx）
@@ -118,7 +118,7 @@ SherpaVoiceToolbox/
 
 ---
 📏 10. 构建质量要求
-- debug 基础包体积 ≤ 100 MB
+- debug 基础包体积 ≤ 200 MB
 - 带模型基础包 ≤ 300 MB
 - 冷启动时间 ≤ 2 秒
 - 核心功能崩溃率 0
