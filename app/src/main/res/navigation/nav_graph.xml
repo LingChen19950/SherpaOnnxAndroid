@@ -1,56 +1,53 @@
-<?xml version="1.0" encoding="utf-8"?><!--
-    navigation: 导航图根标签
-    作用: 定义整个 App 的页面导航结构
-
-    属性说明:
-    - id: 导航图的唯一标识
-    - startDestination: 指定 App 启动时显示的第一个页面
--->
+<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/main_fragment">
+    app:startDestination="@id/mainFragment">
 
+    <!-- 一级Tab1：功能首页 -->
     <fragment
-        android:id="@+id/main_fragment"
+        android:id="@+id/mainFragment"
         android:name="com.lc.sherpa.ui.MainFragment"
         android:label="语音工具箱"
         tools:layout="@layout/fragment_main">
 
+        <!-- 子页面跳转：ASR -->
         <action
             android:id="@+id/action_to_asr"
-            app:destination="@id/asr_fragment" />
+            app:destination="@id/asrFragment" />
 
+        <!-- 子页面跳转：TTS -->
         <action
             android:id="@+id/action_to_tts"
-            app:destination="@id/tts_fragment" />
-
-        <action
-            android:id="@+id/action_to_model"
-            app:destination="@id/model_fragment" />
+            app:destination="@id/ttsFragment" />
 
     </fragment>
 
-    <!-- 实时语音识别 -->
+    <!-- 实时语音识别ASR子页面 -->
     <fragment
-        android:id="@+id/asr_fragment"
+        android:id="@+id/asrFragment"
         android:name="com.lc.sherpa.ui.ASRFragment"
         android:label="实时语音识别"
         tools:layout="@layout/fragment_asr" />
 
-    <!-- 语音合成 -->
+    <!-- 语音合成TTS子页面 -->
     <fragment
-        android:id="@+id/tts_fragment"
+        android:id="@+id/ttsFragment"
         android:name="com.lc.sherpa.ui.TTSFragment"
         android:label="语音合成"
         tools:layout="@layout/fragment_tts" />
 
-    <!-- 模型管理 -->
+    <!-- 一级Tab2：模型管理页 -->
     <fragment
-        android:id="@+id/model_fragment"
+        android:id="@+id/modelFragment"
         android:name="com.lc.sherpa.ui.ModelFragment"
-        android:label="模型管理"
-        tools:layout="@layout/fragment_model" />
+        android:label="模型" />
+
+    <!-- 一级Tab3：关于页面 -->
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="com.lc.sherpa.ui.AboutFragment"
+        android:label="关于" />
 
 </navigation>

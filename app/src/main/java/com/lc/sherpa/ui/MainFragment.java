@@ -40,11 +40,5 @@ public class MainFragment extends Fragment {
             Log.d(TAG, "onViewCreated: 跳转到语音合成");
             Navigation.findNavController(v).navigate(R.id.action_to_tts);
         });
-
-        // 跳转到模型管理
-        view.findViewById(R.id.card_model).setOnClickListener(v -> {
-            Log.d(TAG, "onViewCreated: 跳转到模型管理");
-            Navigation.findNavController(v).navigate(R.id.action_to_model);
-        });
     }
 }

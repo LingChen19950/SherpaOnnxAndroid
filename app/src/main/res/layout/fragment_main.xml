@@ -11,16 +11,6 @@
         android:orientation="vertical"
         android:padding="32dp">
 
-        <!-- 标题区域 -->
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="8dp"
-            android:text="@string/sherpa_onnx"
-            android:textColor="#1A1A1A"
-            android:textSize="28sp"
-            android:textStyle="bold" />
-
         <!-- 实时语音识别 -->
         <com.google.android.material.card.MaterialCardView
             android:id="@+id/card_live_asr"
@@ -108,51 +98,6 @@
                     android:layout_marginTop="6dp"
                     android:alpha="0.85"
                     android:text="@string/tts_tip"
-                    android:textColor="#FFFFFF"
-                    android:textSize="12sp" />
-            </LinearLayout>
-        </com.google.android.material.card.MaterialCardView>
-
-        <!-- 模型管理 -->
-        <com.google.android.material.card.MaterialCardView
-            android:id="@+id/card_model"
-            android:layout_width="match_parent"
-            android:layout_height="140dp"
-            android:clickable="true"
-            android:focusable="true"
-            android:foreground="?attr/selectableItemBackground"
-            app:cardBackgroundColor="#388E3C"
-            app:cardCornerRadius="16dp"
-            app:cardElevation="4dp">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center"
-                android:orientation="vertical"
-                android:padding="16dp">
-
-                <ImageView
-                    android:layout_width="48dp"
-                    android:layout_height="48dp"
-                    android:contentDescription="@string/model_management"
-                    android:src="@android:drawable/ic_menu_manage"
-                    app:tint="#FFFFFF" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="@string/model_management"
-                    android:textColor="#FFFFFF"
-                    android:textSize="20sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="6dp"
-                    android:alpha="0.85"
-                    android:text="@string/model_tip"
                     android:textColor="#FFFFFF"
                     android:textSize="12sp" />
             </LinearLayout>

@@ -9,7 +9,9 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
+import androidx.navigation.ui.NavigationUI;
 
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.lc.sherpa.R;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,10 +39,23 @@ public class MainActivity extends AppCompatActivity {
         // 初始化导航控制器
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.nav_host_fragment);
-
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();
         }
+
+        // 绑定底部导航和NavController
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_nav);
+        NavigationUI.setupWithNavController(bottomNav, navController);
+
+        // 监听底部导航的点击事件
+        bottomNav.setOnItemSelectedListener(item -> {
+            // 如果点击的是主页,则直接返回主页,而不是跳转到主页
+            if (item.getItemId() == R.id.mainFragment) {
+                navController.popBackStack(R.id.mainFragment, false);
+                return true;
+            }
+            return NavigationUI.onNavDestinationSelected(item, navController);
+        });
     }
 
     /**

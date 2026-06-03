@@ -7,4 +7,7 @@
     <string name="sherpa_onnx">Sherpa ONNX</string>
     <string name="tts_tip">文字转语音</string>
     <string name="model_tip">管理模型文件</string>
+    <string name="about">关于</string>
+    <string name="model">模型</string>
+    <string name="home">首页</string>
 </resources>
