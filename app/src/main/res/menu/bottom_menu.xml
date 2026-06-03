@@ -2,14 +2,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/mainFragment"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/baseline_home_24"
         android:title="@string/home" />
     <item
         android:id="@+id/modelFragment"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/baseline_model_training_24"
         android:title="@string/model" />
     <item
         android:id="@+id/aboutFragment"
-        android:icon="@drawable/ic_launcher_background"
+        android:icon="@drawable/baseline_settings_suggest_24"
         android:title="@string/about" />
 </menu>
