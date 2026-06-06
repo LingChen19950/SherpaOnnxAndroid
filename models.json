@@ -1,0 +1,18 @@
+[
+  {
+    "id": "asr_zh_cn",
+    "name": "中文实时ASR模型",
+    "type": "ASR",
+    "size": "42MB",
+    "fileName": "asr_zh.onnx",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/sherpa-onnx-streaming-zipformer-zh-14M-2024-03-13.onnx"
+  },
+  {
+    "id": "tts_zh_cn",
+    "name": "中文女声TTS模型",
+    "type": "TTS",
+    "size": "56MB",
+    "fileName": "tts_zh.onnx",
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/vits-meta-zh.onnx"
+  }
+]
