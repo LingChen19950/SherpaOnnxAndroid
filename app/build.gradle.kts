@@ -75,5 +75,10 @@ dependencies {
     // Jetpack Navigation
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.7")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.7")
+    // 图标
     implementation("com.google.android.material:material:1.9.0")
+    // http网络
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    // json解析
+    implementation("com.google.code.gson:gson:2.10.1")
 }
