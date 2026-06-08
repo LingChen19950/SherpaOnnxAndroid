@@ -15,12 +15,23 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- 刷新 -->
+    <TextView
+        android:id="@+id/tv_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update"
+        android:layout_marginStart="12dp"
+        android:textColor="@color/material_dynamic_secondary30"
+        android:textSize="12sp"
+        app:layout_constraintTop_toBottomOf="@id/title" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_models"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/title" />
+        app:layout_constraintTop_toBottomOf="@id/tv_update" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fab_import"

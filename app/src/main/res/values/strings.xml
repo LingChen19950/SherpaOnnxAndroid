@@ -15,4 +15,5 @@
     <string name="download">下载</string>
     <string name="delete">删除</string>
     <string name="use">使用</string>
+    <string name="update">刷新</string>
 </resources>

@@ -18,7 +18,10 @@ public class SpUtil {
 
     private static final String TAG = "SpUtil";
     private static final String DEFAULT_SP_NAME = "sherpa_onnx_prefs";
-    
+
+    // 模型数据
+    public static final String KEY_MODELS_JSON = "models_json_data";
+
     private static volatile SpUtil instance;
     private final SharedPreferences sharedPreferences;
 

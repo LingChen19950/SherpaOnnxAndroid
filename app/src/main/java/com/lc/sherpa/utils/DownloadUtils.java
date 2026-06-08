@@ -24,9 +24,9 @@ public class DownloadUtils {
 
     // 国内加速地址池
     private static final String[] URL_POOL = {
-            "https://raw.gitmirror.com/LingChen19950/SherpaOnnxAndroid/main/models.json",
-            "https://cdn.jsdelivr.net/gh/LingChen19950/SherpaOnnxAndroid@main/models.json",
-            "https://mirror.ghproxy.com/https://raw.githubusercontent.com/LingChen19950/SherpaOnnxAndroid/main/models.json"
+            "https://raw.gitmirror.com/LingChen19950/SherpaOnnxAndroid/main/app/src/main/assets/models.json",
+            "https://cdn.jsdelivr.net/gh/LingChen19950/SherpaOnnxAndroid@main/app/src/main/assets/models.json",
+            "https://mirror.ghproxy.com/https://raw.githubusercontent.com/LingChen19950/SherpaOnnxAndroid/main/app/src/main/assets/models.json"
     };
 
     private static int currentUrlIndex = 0;
