@@ -16,4 +16,6 @@
     <string name="delete">删除</string>
     <string name="use">使用</string>
     <string name="update">刷新</string>
+    <string name="asr">语音识别ASR</string>
+    <string name="start_asr">按住识别</string>
 </resources>
